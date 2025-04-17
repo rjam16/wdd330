@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile</title>
+  <link rel="stylesheet" href="./styles/profile.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./images/icon-image.png" alt="Game Icon" class="logo-icon" />
+      <h2>Game Quest Log</h2>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="wishlist.html">My List</a>
+      <a href="login-form.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="profile-container">
+    <h2>Your Profile</h2>
+    <div class="profile-info">
+      <p><strong>Username:</strong> <span id="username">JohnDoe</span></p>
+      <p><strong>Email:</strong> <span id="email">john.doe@example.com</span></p>
+    </div>
+    <div class="profile-actions">
+      <button onclick="editProfile()">Edit Profile</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Game Quest Log. Rebekah James. WDD330</p>
+  </footer>
+
+  <script src="./js/profile.js"></script>
+</body>
+</html>

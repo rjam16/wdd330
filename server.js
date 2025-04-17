@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const igdbRoutes = require('./game-wishlist/server/igdb');
+require('dotenv').config();
 
 const app = express();
 const PORT = 3000;
@@ -34,6 +36,25 @@ app.post('/signup', (req, res) => {
   users.push({ username, email, password });
   res.json({ success: true, message: 'Signup successful' });
 });
+
+app.use('/api', igdbRoutes);
+
+const wishlistRoutes = require('./routes/wishlist');
+app.use('/wishlist', wishlistRoutes);
+
+app.patch('/wishlist/:gameId/status', async (req, res) => {
+  const { status } = req.body;
+  const { userId } = req.session;
+  const { gameId } = req.params;
+
+  const user = await User.findById(userId);
+  const game = user.wishlist.id(gameId);
+  game.status = status;
+
+  await user.save();
+  res.json({ success: true, game });
+});
+
 
 // Start server
 app.listen(PORT, () => {

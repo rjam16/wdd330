@@ -83,6 +83,7 @@ nav a:hover{
 .hero-content {
   max-width: 600px;
   padding: 2rem;
+  z-index: 2;
 }
 
 .hero h1 {
@@ -128,6 +129,58 @@ nav a:hover{
   color: var(--light-text);
   font-size: 1.5rem;
   cursor: pointer;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.search-container input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  width: 60%;
+  max-width: 400px;
+  font-family: var(--font-base);
+}
+
+.search-container button {
+  padding: 0.75rem 1rem;
+  background: var(--forest-green);
+  color: var(--light-text);
+  border: none;
+  border-radius: 0.75rem;
+  font-family: var(--font-pixel);
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #014d16;
+}
+
+.results {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.result-card {
+  background: var(--teal);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--light-text);
+  max-width: 200px;
+  text-align: center;
+}
+
+.result-card img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 footer {
   text-align: center;

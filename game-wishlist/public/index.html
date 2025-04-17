@@ -20,7 +20,7 @@
     </button>
     <nav>
       <a href="index.html">Home</a>
-      <a href="#">My List</a>
+      <a href="wishlist.html">My List</a>
       <a href="login-form.html">Login</a>
     </nav>
   </header>
@@ -35,8 +35,13 @@
       <div class="hero-content">
         <h1>Track the Games You Want to Play</h1>
         <p>Never forget a title again. Create your own gaming wishlist and manage your backlogs easily.</p>
+        <div class="search-container">
+          <input type="text" id="gameSearch" placeholder="Search for a game..." />
+          <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="searchResults" class="results"></div>        
         <div class="buttons">
-          <a href="#">Get Started</a>
+          <a href="profile.html">Get Started</a>
           <a href="login-form.html">Login</a>
         </div>
       </div>
