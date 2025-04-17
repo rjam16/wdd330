@@ -1,0 +1,105 @@
+body {
+    font-family: var(--font-base);
+    background: var(--deep-purple);
+    color: var(--light-text);
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('../images/form-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Add a dark overlay to improve form visibility */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(2, 54, 24, 0.85); /* matches hero overlay */
+    z-index: 0;
+  }
+  
+  .auth-container {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 92, 105, 0.9);
+    padding: 3rem; /* more padding */
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 500px; /* wider form */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+  }
+  
+  .auth-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-tabs button {
+    flex: 1;
+    padding: 0.75rem;
+    background: none;
+    border: none;
+    color: var(--light-text);
+    font-weight: bold;
+    font-family: var(--font-pixel);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 1rem; /* bigger tab buttons */
+  }
+  
+  .auth-tabs button.active {
+    border-color: var(--primary-purple);
+    color: var(--primary-purple);
+  }
+  
+  form {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  form.active {
+    display: flex;
+  }
+  
+  input {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: #442c52;
+    color: var(--light-text);
+    font-family: var(--font-base);
+  }
+  
+  input::placeholder {
+    color: #ccc;
+  }
+  
+  button.submit-btn {
+    padding: 1rem;
+    background: var(--forest-green);
+    border: none;
+    border-radius: 0.75rem;
+    color: var(--light-text);
+    font-family: var(--font-pixel);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button.submit-btn:hover {
+    background: #014d16; /* Slightly darker than forest green */
+  }
